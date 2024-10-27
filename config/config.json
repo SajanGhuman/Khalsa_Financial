@@ -1,0 +1,58 @@
+{
+  "site": {
+    "title": "KFC",
+    "base_url": "/",
+    "favicon": "/images/favicon.png",
+    "logo": "/images/logo.svg",
+    "logo_width": "240",
+    "logo_height": "34",
+    "logo_text": "KFC"
+  },
+
+  "settings": {
+    "pagination": 6,
+    "summary_length": 200,
+    "blog_folder": "posts"
+  },
+
+  "params": {
+    "tag_manager_id": "",
+    "contact_form_action": "#",
+    "footer_content": "Lorem ipsum dolor sit sed dmi amet, consectetur adipiscing. Cdo tellus, sed condimentum volutpat.",
+    "copyright": "Designed & Developed By Sajan Ghuman"
+  },
+
+  "contact_info": {
+    "phone": "123456789",
+    "email": "info@kfc.com",
+    "location": "Canada"
+  },
+
+  "nav_button": {
+    "enable": true,
+    "label": "ENROLL NOW",
+    "link": "#"
+  },
+
+  "metadata": {
+    "meta_author": "Themefisher",
+    "meta_image": "/images/og-image.png",
+    "meta_description": "Andromeda-light Nextjs Blog Template"
+  },
+
+  "call_to_action": {
+    "enable": true,
+    "title": "Enroll in the course now",
+    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi egestas </br> Werat viverra id et aliquet. vulputate egestas sollicitudin.",
+    "button": {
+      "label": "ENROLL NOW",
+      "link": "#"
+    }
+  },
+
+  "disqus": {
+    "enable": true,
+    "shortname": "themefisher-template",
+    "settings": {}
+  }
+}
