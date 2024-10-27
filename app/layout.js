@@ -1,10 +1,10 @@
 "use client";
 
-import config from "@config/config.json";
-import theme from "@config/theme.json";
-import TwSizeIndicator from "@layouts/components/TwSizeIndicator";
-import Footer from "@layouts/partials/Footer";
-import Header from "@layouts/partials/Header";
+import config from "../config/config.json";
+import theme from "../config/theme.json";
+import TwSizeIndicator from "../layouts/components/TwSizeIndicator";
+import Footer from "../layouts/partials/Footer";
+import Header from "../layouts/partials/Header";
 import "../styles/style.scss";
 
 export default function RootLayout({ children }) {

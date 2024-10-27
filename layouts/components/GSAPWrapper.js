@@ -1,6 +1,6 @@
 "use client";
 
-import { gsap } from "@lib/gsap";
+import { gsap } from "../../lib/gsap";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef } from "react";
 

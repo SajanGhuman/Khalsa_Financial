@@ -1,10 +1,56 @@
-import config from "@config/config.json";
+"use client";
 import Banner from "./components/Banner";
 import ImageFallback from "./components/ImageFallback";
+import { useState, useRef } from "react";
 
 const Contact = ({ data }) => {
   const { frontmatter } = data;
   const { title } = frontmatter;
+
+  const [formError, setFormError] = useState(null);
+  const [formSuccess, setFormSuccess] = useState(null);
+
+  // Create a reference to the form
+  const formRef = useRef(null);
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+
+    // Collect form data
+    const formData = new FormData(event.target);
+    const dataToSend = {
+      name: formData.get("name"),
+      email: formData.get("email"),
+      tradingLevel: formData.get("tradingLevel"),
+    };
+
+    try {
+      const response = await fetch("/api/send", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(dataToSend),
+      });
+
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
+
+      // Handle success
+      setFormSuccess("Registered successfully. Please check your email.");
+      setFormError(null);
+
+      // Clear the form fields
+      formRef.current.reset();
+    } catch (error) {
+      // Handle error
+      setFormError(
+        "There was an error sending your message. Please try again.",
+      );
+      setFormSuccess(null);
+    }
+  };
 
   return (
     <section className="section">
@@ -22,11 +68,15 @@ const Contact = ({ data }) => {
           </div>
           <div className="animate lg:col-5">
             <form
-              method="POST"
-              action={config.params.contact_form_action}
+              onSubmit={handleSubmit}
+              ref={formRef} // Attach the ref here
               className="contact-form rounded-xl p-6 shadow-[0_4px_25px_rgba(0,0,0,0.05)]"
             >
               <h2 className="h4 mb-6">Send A Message</h2>
+              {formError && <p className="text-red-600 mb-4">{formError}</p>}
+              {formSuccess && (
+                <p className="text-green-600 mb-4">{formSuccess}</p>
+              )}
               <div className="mb-6">
                 <label
                   className="mb-2 block font-medium text-dark"
@@ -60,25 +110,20 @@ const Contact = ({ data }) => {
               <div className="mb-6">
                 <label
                   className="mb-2 block font-medium text-dark"
-                  htmlFor="subject"
+                  htmlFor="trading-level"
                 >
-                  Subject
+                  Level of Trading
                 </label>
-                <input
-                  className="form-input w-full"
-                  name="subject"
-                  type="text"
+                <select
+                  className="form-select w-full"
+                  name="tradingLevel"
                   required
-                />
-              </div>
-              <div className="mb-6">
-                <label
-                  className="mb-2 block font-medium text-dark"
-                  htmlFor="message"
                 >
-                  Message
-                </label>
-                <textarea className="form-textarea w-full" rows="6" />
+                  <option value="">Select your level</option>
+                  <option value="Beginner">Beginner</option>
+                  <option value="Intermediate">Intermediate</option>
+                  <option value="Expert">Expert</option>
+                </select>
               </div>
               <button className="btn btn-primary block w-full">
                 Submit Now

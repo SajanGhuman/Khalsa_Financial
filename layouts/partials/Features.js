@@ -1,10 +1,6 @@
 "use client";
 
-import { markdownify } from "@lib/utils/textConverter";
-import FeatherIcon from "feather-icons-react/build/FeatherIcon";
 import { useRef } from "react";
-import { Pagination } from "swiper";
-import { Swiper, SwiperSlide } from "swiper/react";
 
 const Features = ({ features }) => {
   const paginationRef = useRef(null);

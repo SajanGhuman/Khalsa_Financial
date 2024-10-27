@@ -1,4 +1,4 @@
-import shortcodes from "@layouts/shortcodes/all";
+import shortcodes from "../../layouts/shortcodes/all";
 import "highlight.js/styles/solarized-light.css";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import rehypeHighlight from "rehype-highlight";

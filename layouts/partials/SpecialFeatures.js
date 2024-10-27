@@ -1,5 +1,5 @@
-import ImageFallback from "@layouts/components/ImageFallback";
-import { markdownify } from "@lib/utils/textConverter";
+import ImageFallback from "../../layouts/components/ImageFallback";
+import { markdownify } from "../../lib/utils/textConverter";
 
 const SpecialFeatures = ({ speciality }) => {
   return (

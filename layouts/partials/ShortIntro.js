@@ -1,8 +1,8 @@
 "use client";
 
-import Circle from "@layouts/components/Circle";
-import VideoPopup from "@layouts/components/VideoPopup";
-import { markdownify } from "@lib/utils/textConverter";
+import Circle from "../../layouts/components/Circle";
+import VideoPopup from "../../layouts/components/VideoPopup";
+import { markdownify } from "../../lib/utils/textConverter";
 
 const ShortIntro = ({ intro }) => {
   return (

@@ -1,5 +1,5 @@
-import config from "@config/config.json";
-import { markdownify } from "@lib/utils/textConverter";
+import config from "../../config/config.json";
+import { markdownify } from "../../lib/utils/textConverter";
 import Link from "next/link";
 import Circle from "./Circle";
 import ImageFallback from "./ImageFallback";

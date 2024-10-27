@@ -1,6 +1,6 @@
 "use client";
 
-import { markdownify } from "@lib/utils/textConverter";
+import { markdownify } from "../lib/utils/textConverter";
 import { Autoplay } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import Banner from "./components/Banner";

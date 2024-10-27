@@ -1,6 +1,6 @@
 "use client";
-import { gsap } from "@lib/gsap";
-import { markdownify } from "@lib/utils/textConverter";
+import { gsap } from "../../lib/gsap";
+import { markdownify } from "../../lib/utils/textConverter";
 import Link from "next/link";
 import { useEffect, useRef } from "react";
 import Circle from "./Circle";

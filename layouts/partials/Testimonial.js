@@ -1,7 +1,7 @@
 "use client";
 
-import ImageFallback from "@layouts/components/ImageFallback";
-import { markdownify } from "@lib/utils/textConverter";
+import ImageFallback from "../../layouts/components/ImageFallback";
+import { markdownify } from "../../lib/utils/textConverter";
 import { useRef } from "react";
 import { TbQuote } from "react-icons/tb";
 import { Autoplay, Pagination } from "swiper";

@@ -1,10 +1,10 @@
 "use client";
 
-import Circle from "@layouts/components/Circle";
-import ImageFallback from "@layouts/components/ImageFallback";
-import Notice from "@layouts/shortcodes/Notice";
-import { gsap } from "@lib/gsap";
-import { markdownify } from "@lib/utils/textConverter";
+import Circle from "../../layouts/components/Circle";
+import ImageFallback from "../../layouts/components/ImageFallback";
+import Notice from "../../layouts/shortcodes/Notice";
+import { gsap } from "../../lib/gsap";
+import { markdownify } from "../../lib/utils/textConverter";
 import Link from "next/link";
 import { useEffect } from "react";
 
@@ -63,7 +63,7 @@ const HomeBanner = ({ banner: bannerData, brands }) => {
   }, []);
 
   return (
-    <section className="section banner pb-0 mb-[350px] pt-0 mt-0">
+    <section className="section banner pb-0 mb-[0px] pt-0 mt-0">
       <div className="container-xl">
         <div className="relative">
           <div className="bg-theme banner-bg min-w-[100vw] min-h-[600px] absolute left-1/2 top-0 transform -translate-x-1/2"></div>
@@ -71,6 +71,7 @@ const HomeBanner = ({ banner: bannerData, brands }) => {
             <div className="col-12">
               <div className="banner-content col-12 h-[0px] pb-[100px] mb-0 pt-[520px] text-center flex justify-center items-end">
                 <div className="flex justify-center items-center gap-[400px]">
+
                   {/*Table*/}
                   <div>
                     <div className="max-w-3xl mx-auto bg-white shadow-lg rounded-xl overflow-hidden banner-table">
