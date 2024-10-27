@@ -1,6 +1,8 @@
 "use client";
 
 import Circle from "@layouts/components/Circle";
+import ImageFallback from "@layouts/components/ImageFallback";
+import Notice from "@layouts/shortcodes/Notice";
 import { gsap } from "@lib/gsap";
 import { markdownify } from "@lib/utils/textConverter";
 import Link from "next/link";
@@ -156,7 +158,8 @@ const HomeBanner = ({ banner: bannerData, brands }) => {
                     "h1",
                     "mb-8 banner-title opacity-0",
                   )}
-                  <div className="banner-btn opacity-0">
+
+                  {/*                  <div className="banner-btn opacity-0">
                     <Link
                       className="btn btn-primary"
                       href={bannerData.link.href}
@@ -164,17 +167,76 @@ const HomeBanner = ({ banner: bannerData, brands }) => {
                       {bannerData.link.label}
                     </Link>
                   </div>
-                </div>
-                <div className="col-10">
-                  {/*                  <ImageFallback
-                    className="banner-img opacity-0"
-                    src={bannerData.image}
-                    width={1170}
-                    height={666}
-                    priority={true}
-                    alt=""
-                  />
                   */}
+                </div>
+
+                <div className="max-w-3xl mx-auto bg-white shadow-lg rounded-xl overflow-hidden">
+                  {/* Header Section */}
+                  <div className="flex items-center p-4 space-x-6 bg-gray-100 rounded-t-xl">
+                    {/* Avatar */}
+                    <div className="avatar">
+                      <div className="mask mask-squircle w-16 h-16">
+                        <img
+                          src="https://img.daisyui.com/images/profile/demo/2@94.webp"
+                          alt="Trainer Avatar"
+                        />
+                      </div>
+                    </div>
+                    {/* Trainer Info */}
+                    <div>
+                      <h2 className="text-lg font-semibold">Avadhut Sathe</h2>
+                      <p className="text-sm text-gray-500">Trainer</p>
+                    </div>
+                  </div>
+
+                  {/* Divider */}
+                  <hr className="border-gray-300" />
+
+                  {/* Data Section */}
+                  <div className="flex justify-between items-center p-4 space-x-4">
+                    {/* Status */}
+                    <div className="text-center">
+                      <div className="text-sm font-medium text-gray-700 mb-1">
+                        Status
+                      </div>
+                      <div className="bg-green-500 text-white py-1 px-3 rounded-full text-xs font-semibold">
+                        Online
+                      </div>
+                    </div>
+                    {/* Date */}
+                    <div className="text-center">
+                      <div className="text-sm font-medium text-gray-700 mb-1">
+                        Date
+                      </div>
+                      <div className="text-gray-600">27 Oct</div>
+                    </div>
+                    {/* Language / Time */}
+                    <div className="text-center">
+                      <div className="text-sm font-medium text-gray-700 mb-1">
+                        Language / Time
+                      </div>
+                      <div className="text-gray-600">
+                        Hindi | 6:00 PM – 9:00 PM
+                      </div>
+                    </div>
+                    {/* Register Button */}
+                    <div>
+                      <button className="btn btn-primary rounded-full px-4 py-2">
+                        Register Now
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="col-10">
+                  <ImageFallback
+                    className="banner-img opacity-0 relative left-[1100px] top-[-150px]"
+                    src={bannerData.image}
+                    width={200}
+                    height={500}
+                    priority={true}
+                    alt="headshot_me"
+                  />
                 </div>
               </div>
             </div>

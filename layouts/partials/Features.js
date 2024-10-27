@@ -8,7 +8,10 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 const Features = ({ features }) => {
   const paginationRef = useRef(null);
-  return (
+  return;
+  <></>;
+  {
+    /*
     <section className="section">
       <div className="container text-center">
         <div className="animate">
@@ -57,7 +60,8 @@ const Features = ({ features }) => {
         </div>
       </div>
     </section>
-  );
+            */
+  }
 };
 
 export default Features;
