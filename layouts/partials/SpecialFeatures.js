@@ -3,7 +3,7 @@ import { markdownify } from "@lib/utils/textConverter";
 
 const SpecialFeatures = ({ speciality }) => {
   return (
-    <section className="section">
+    <section className="section pt-0 mt-0">
       <div className="container">
         <div className="row items-center justify-center">
           <div className="animate lg:col-6 lg:order-2">
@@ -20,7 +20,7 @@ const SpecialFeatures = ({ speciality }) => {
             {markdownify(
               speciality.primary.title,
               "h2",
-              "mt-4 section-title bar-left"
+              "mt-4 section-title bar-left",
             )}
             {markdownify(speciality.primary.description, "p", "mt-10")}
           </div>
@@ -40,7 +40,7 @@ const SpecialFeatures = ({ speciality }) => {
             {markdownify(
               speciality.secondary.title,
               "h2",
-              "mt-4 section-title bar-left"
+              "mt-4 section-title bar-left",
             )}
             {markdownify(speciality.secondary.description, "p", "mt-10")}
           </div>
