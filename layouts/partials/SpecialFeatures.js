@@ -1,5 +1,4 @@
 import ImageFallback from "../../layouts/components/ImageFallback";
-import { markdownify } from "../../lib/utils/textConverter";
 
 const SpecialFeatures = ({ speciality }) => {
   return (
@@ -16,13 +15,15 @@ const SpecialFeatures = ({ speciality }) => {
             />
           </div>
           <div className="animate lg:col-5 lg:order-1">
-            <p>{speciality.primary.subtitle}</p>
-            {markdownify(
-              speciality.primary.title,
-              "h2",
-              "mt-4 section-title bar-left",
-            )}
-            {markdownify(speciality.primary.description, "p", "mt-10")}
+            <p>Why Choose Us</p>
+            <h2 className="mt-4 section-title bar-left">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+            </h2>
+            <p className="mt-10">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+            </p>
           </div>
         </div>
         <div className="row items-center">
@@ -36,13 +37,14 @@ const SpecialFeatures = ({ speciality }) => {
             />
           </div>
           <div className="animate lg:col-5">
-            <p>{speciality.secondary.subtitle}</p>
-            {markdownify(
-              speciality.secondary.title,
-              "h2",
-              "mt-4 section-title bar-left",
-            )}
-            {markdownify(speciality.secondary.description, "p", "mt-10")}
+            <p>Lorem Ipsum is simply ypesetting</p>
+            <h2 className="mt-4 section-title bar-left">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+            </h2>
+            <p className="mt-10">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+            </p>
           </div>
         </div>
       </div>

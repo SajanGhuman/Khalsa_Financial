@@ -7,19 +7,14 @@ import React, { useEffect, useRef, useState } from "react";
 import { CgClose } from "react-icons/cg";
 
 const Header = () => {
-  // distructuring the main menu from menu object
   const { main } = menu;
-
-  // states declaration
   const [showMenu, setShowMenu] = useState(false);
   const [sticky, setSticky] = useState(false);
   const headerRef = useRef(null);
   const [direction, setDirection] = useState(null);
-
   const pathname = usePathname();
   const asPath = pathname;
 
-  //sticky header
   useEffect(() => {
     const header = headerRef.current;
     const headerHeight = header.clientHeight + 200;
@@ -36,7 +31,6 @@ const Header = () => {
     });
   }, []);
 
-  // logo source
   const { logo } = config.site;
 
   return (
@@ -48,15 +42,14 @@ const Header = () => {
         }`}
         ref={headerRef}
       >
-        <nav className="navbar container-xl">
-          {/* logo */}
+        <nav className="navbar container-xl flex justify-between items-center">
           <div className="order-0">
-            <Logo src={logo} />
+            <h5><b>KHALSA FINANCIAL</b></h5>
           </div>
 
           <ul
             id="nav-menu"
-            className={`navbar-nav order-2 w-full justify-center lg:order-1 md:w-auto md:space-x-2 lg:flex ${
+            className={`navbar-nav order-1 flex justify-center w-full lg:order-1 md:w-auto md:space-x-2 lg:flex ${
               !showMenu && "hidden"
             }`}
           >
@@ -99,28 +92,9 @@ const Header = () => {
                 )}
               </React.Fragment>
             ))}
-            {config.nav_button.enable && (
-              <li className="nav-item lg:hidden">
-                <Link
-                  className="btn btn-primary hidden lg:flex"
-                  href={config.nav_button.link}
-                >
-                  {config.nav_button.label}
-                </Link>
-              </li>
-            )}
           </ul>
-          <div className="order-1 ml-auto flex items-center md:ml-0">
-            {config.nav_button.enable && (
-              <Link
-                className="btn btn-primary hidden lg:flex"
-                href={config.nav_button.link}
-              >
-                {config.nav_button.label}
-              </Link>
-            )}
 
-            {/* navbar toggler */}
+          <div className="order-1 ml-auto flex items-center md:ml-0">
             {showMenu ? (
               <button
                 className="h-8 w-8 text-3xl text-dark lg:hidden"
@@ -146,7 +120,6 @@ const Header = () => {
                 </svg>
               </button>
             )}
-            {/* /navbar toggler */}
           </div>
         </nav>
       </header>
@@ -155,3 +128,4 @@ const Header = () => {
 };
 
 export default Header;
+

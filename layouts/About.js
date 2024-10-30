@@ -1,31 +1,14 @@
 "use client";
-
-import { markdownify } from "../lib/utils/textConverter";
-import { Autoplay } from "swiper";
-import { Swiper, SwiperSlide } from "swiper/react";
 import Banner from "./components/Banner";
 import Circle from "./components/Circle";
 import Cta from "./components/Cta";
 import ImageFallback from "./components/ImageFallback";
-import VideoPopup from "./components/VideoPopup";
 
-const About = ({ data }) => {
-  const { frontmatter } = data;
-  const {
-    title,
-    about_us,
-    works,
-    mission,
-    video,
-    clients,
-    our_member,
-    our_office,
-  } = frontmatter;
-
+const About = () => {
   return (
     <>
       <section className="section pt-0">
-        <Banner title={title} />
+        <Banner title="About Us" />
         {/* About */}
         <div className="section container">
           <div className="row items-center justify-center">
@@ -33,7 +16,7 @@ const About = ({ data }) => {
               <div className="about-image relative p-[60px]">
                 <ImageFallback
                   className="animate relative w-full rounded-2xl"
-                  src={about_us.image}
+                  src="/path/to/image.jpg"
                   width={425}
                   height={487}
                   alt=""
@@ -73,9 +56,12 @@ const About = ({ data }) => {
               </div>
             </div>
             <div className="animate md:col-6 md:order-1 lg:col-4">
-              <p>{about_us.subtitle}</p>
-              {markdownify(about_us.title, "h2", "section-title bar-left mt-4")}
-              {markdownify(about_us.content, "p", "mt-10")}
+              <p>WHO WE ARE</p>
+              <h2 className="section-title bar-left mt-4">About Us</h2>
+              <p className="mt-10">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </p>
             </div>
           </div>
         </div>
@@ -83,16 +69,21 @@ const About = ({ data }) => {
         {/* Works */}
         <div className="section container">
           <div className="animate text-center">
-            <p>{works.subtitle}</p>
-            {markdownify(works.title, "h2", "section-title mt-4")}
-            {markdownify(works.content, "p", "mt-10")}
+            <p>Our Works</p>
+            <h2 className="section-title mt-4">What We Do</h2>
+            <p className="mt-10">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
           </div>
           <div className="row mt-10 justify-center">
-            {works.list.map((work, index) => (
+            {Array.from({ length: 3 }, (_, index) => (
               <div key={"work-" + index} className="mt-10 md:col-6 lg:col-5">
                 <div className="animate text-center md:px-6 xl:px-12">
-                  {markdownify(work.title, "h3", "h4")}
-                  {markdownify(work.content, "p", "mt-2")}
+                  <h3 className="h4">Work Title</h3>
+                  <p className="mt-2">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  </p>
                 </div>
               </div>
             ))}
@@ -106,7 +97,7 @@ const About = ({ data }) => {
               <div className="about-image relative p-[60px]">
                 <ImageFallback
                   className="animate relative w-full rounded-2xl"
-                  src={mission.image}
+                  src="/path/to/image.jpg"
                   width={425}
                   height={487}
                   alt=""
@@ -146,146 +137,96 @@ const About = ({ data }) => {
               </div>
             </div>
             <div className="animate md:col-6 lg:col-4">
-              <p>{mission.subtitle}</p>
-              {markdownify(mission.title, "h2", "section-title bar-left mt-4")}
-              {markdownify(mission.content, "p", "mt-10")}
+              <p>Our Mission</p>
+              <h2 className="section-title bar-left mt-4">Mission Statement</h2>
+              <p className="mt-10">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </p>
             </div>
           </div>
         </div>
 
-        {/* Video */}
-        {/*       <div className="container-xl relative">
+        {/* Video (Commented Out) */}
+        {/* <div className="container-xl relative">
           <div className="bg-theme absolute left-0 top-0 w-full">
-            <Circle
-              className="left-[7%] top-[21%]"
-              width={32}
-              height={32}
-              fill={false}
-            />
-            <Circle
-              className="left-[30%] top-[10%]"
-              width={20}
-              height={20}
-              fill={false}
-            />
-            <Circle
-              className="bottom-[35%] left-[4%]"
-              width={20}
-              height={20}
-              fill={false}
-            />
-            <Circle
-              className="bottom-[11%] left-[10%]"
-              width={37}
-              height={37}
-              fill={false}
-            />
-            <Circle
-              className="bottom-[48%] left-[44%]"
-              width={37}
-              height={37}
-              fill={false}
-            />
-            <Circle
-              className="bottom-[22%] left-[35%]"
-              width={20}
-              height={20}
-              fill={false}
-            />
-            <Circle
-              className="right-[32%] top-[2%]"
-              width={47}
-              height={47}
-              fill={false}
-            />
-          </div>
+            {/* Circle elements omitted for brevity */}
+        {/* </div>
           <div className="row items-center justify-center py-[90px]">
             <div className="md:col-6 xl:col-4">
               <div className="animate p-5">
-                <p>{video.subtitle}</p>
-                {markdownify(video.title, "h2", "mt-4 section-title bar-left")}
-                {markdownify(video.description, "p", "mt-10")}
+                <p>Watch Our Video</p>
+                <h2 className="mt-4 section-title bar-left">Video Title</h2>
+                <p className="mt-10">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </p>
               </div>
             </div>
             <div className="md:col-6 xl:col-5">
               <div className="px-4 ">
-                <VideoPopup
-                  id={video.video_id}
-                  thumbnail={video.thumbnail}
-                  width={540}
-                  height={585}
-                />
+                <VideoPopup id="video_id" thumbnail="/path/to/thumbnail.jpg" width={540} height={585} />
               </div>
             </div>
           </div>
-        </div>
-        */}
+        </div> */}
 
-        {/* Clients */}
-        {/*       <div className="section container">
+        {/* Clients (Commented Out) */}
+        {/* <div className="section container">
           <div className="animate text-center">
-            <p>{clients.subtitle}</p>
-            {markdownify(clients.title, "h2", "section-title mt-4")}
+            <p>Our Clients</p>
+            <h2 className="section-title mt-4">Clients We Work With</h2>
           </div>
           <div className="animate from-right col-12 mt-16">
             <Swiper
               loop={true}
               slidesPerView={3}
               breakpoints={{
-                992: {
-                  slidesPerView: 5,
-                },
+                992: { slidesPerView: 5 },
               }}
               spaceBetween={20}
               modules={[Autoplay]}
               autoplay={{ delay: 3000 }}
             >
-              {clients.brands.map((brand, index) => (
+              {Array.from({ length: 5 }, (_, index) => (
                 <SwiperSlide
-                  className=" h-20 cursor-pointer px-6 py-6 grayscale  transition hover:grayscale-0 lg:px-10"
+                  className="h-20 cursor-pointer px-6 py-6 grayscale transition hover:grayscale-0 lg:px-10"
                   key={"brand-" + index}
                 >
                   <div className="relative h-full">
-                    <ImageFallback
-                      className="object-contain"
-                      src={brand}
-                      sizes="100vw"
-                      alt=""
-                      fill={true}
-                      priority={true}
-                    />
+                    <ImageFallback className="object-contain" src="/path/to/brand.jpg" sizes="100vw" alt="" fill={true} priority={true} />
                   </div>
                 </SwiperSlide>
               ))}
             </Swiper>
           </div>
-        </div>
-        */}
+        </div> */}
 
         {/* Members */}
         <div className="section container">
           <div className="animate text-center">
-            <p>{our_member.subtitle}</p>
-            {markdownify(our_member.title, "h2", "section-title mt-4")}
-            {markdownify(our_member.content, "p", "mt-16")}
+            <p>Our Team</p>
+            <h2 className="section-title mt-4">Meet Our Members</h2>
+            <p className="mt-16">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
           </div>
           <div className="row justify-center">
             <div className="lg:col-10">
               <div className="row">
-                {our_member.list.map((member, index) => (
+                {Array.from({ length: 3 }, (_, index) => (
                   <div
-                    key={("member-", index)}
+                    key={"member-" + index}
                     className="animate mt-10 text-center md:col-6 lg:col-4"
                   >
                     <ImageFallback
                       className="mx-auto rounded-full shadow-[10px_10px_0] shadow-primary/10"
-                      src={member.image}
+                      src="/path/to/member.jpg"
                       width={245}
                       height={245}
-                      alt={member.name}
+                      alt="Member Name"
                     />
-                    <h4 className="mt-8">{member.name}</h4>
-                    <p className="mt-3">{member.field}</p>
+                    <h4 className="mt-8">Member Name</h4>
+                    <p className="mt-3">Member Field</p>
                   </div>
                 ))}
               </div>
@@ -293,41 +234,29 @@ const About = ({ data }) => {
           </div>
         </div>
 
-        {/* Office */}
-        {/*<div className="section container">
+        {/* Office (Commented Out) */}
+        {/* <div className="section container">
           <div className="animate text-center">
-            <p>{our_office.subtitle}</p>
-            {markdownify(our_office.title, "h2", "section-title mt-4")}
-            {markdownify(our_office.content, "p", "mt-16")}
+            <p>Our Office</p>
+            <h2 className="section-title mt-4">Visit Our Office</h2>
+            <p className="mt-10">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
           </div>
-          <div className="row justify-center">
-            <div className="lg:col-10">
-              <div className="row  justify-center">
-                {our_office.countries.map((country, index) => (
-                  <div
-                    key={("country-", index)}
-                    className="animate mt-10 md:col-6 xl:col-3"
-                  >
-                    <div className="rounded-xl p-5 shadow-[0_4px_25px_rgba(0,0,0,.05)]">
-                      <ImageFallback
-                        // className="mx-auto"
-                        src={country.flag}
-                        width={80}
-                        height={80}
-                        alt={country.name}
-                      />
-                      <h5 className="h4 mt-2">{country.name}</h5>
-                      <p className="mt-2">{country.location}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
+          <div className="mt-16">
+            <Swiper loop={true} spaceBetween={20} modules={[Autoplay]} autoplay={{ delay: 3000 }}>
+              {Array.from({ length: 3 }, (_, index) => (
+                <SwiperSlide className="overflow-hidden" key={"office-" + index}>
+                  <ImageFallback src="/path/to/office.jpg" width={1200} height={700} className="w-full" alt="" />
+                </SwiperSlide>
+              ))}
+            </Swiper>
           </div>
-        </div>
-        */}
+        </div> */}
+
+        {/* CTA */}
+        <Cta />
       </section>
-      <Cta />
     </>
   );
 };

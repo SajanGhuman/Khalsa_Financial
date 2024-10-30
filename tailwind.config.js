@@ -68,6 +68,7 @@ module.exports = {
       fontFamily: {
         primary: [fontPrimary, fontPrimaryType],
         secondary: [fontSecondary, fontSecondaryType],
+        cursive: ["Cedarville Cursive"],
       },
     },
   },

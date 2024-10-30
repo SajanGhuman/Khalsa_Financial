@@ -7,7 +7,7 @@ const Logo = ({ src }) => {
   const { logo, logo_width, logo_height, logo_text, title } = config.site;
 
   return (
-    <Link href="/" className="navbar-brand block">
+    <Link href="/" className="navbar-brand text-[50px] text-start flex justify-center items-center">
       {src || logo ? (
         <ImageFallback
           width={logo_width.replace("px", "") * 2}
