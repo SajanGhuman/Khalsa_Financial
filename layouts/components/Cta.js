@@ -9,14 +9,17 @@ function Cta() {
   if (!enable) return;
 
   return (
-    <section className="cta section pt-0">
+    <section className="cta section pt-0 bg-gradient-to-b from-[#D3BD9A] to-[#EADDCB]">
       <div className="container-xl">
         <div className="section relative px-4 text-center">
           <div className="animate">
-            {markdownify(title, "h2", "section-title")}
-            {markdownify(content, "p", "mt-10")}
-            <Link href={button.link} className="btn btn-primary mt-10">
-              {button.label}
+            <h2 className="section-title">Enroll in the course now</h2>
+            <p className="mt-10 text-black">lorem</p>
+            <Link
+              href={button.link}
+              className="btn btn-primary mt-10 bg-[#674F04] text-[20px] p-2"
+            >
+              ENROLL NOW
             </Link>
           </div>
           <div className="bg-theme animated-bg absolute top-0 left-0 w-full after:hidden">

@@ -64,7 +64,7 @@ const Banner = ({ title }) => {
   }, []);
 
   return (
-    <div className="banner banner-single " ref={banner}>
+    <div className="banner banner-single bg-gradient-to-b from-[#D3BD9A] to-[#EADDCB]" ref={banner}>
       <div className="container-xl ">
         <div className="banner-wrapper relative text-center">
           {markdownify(title, "h1", "mb-8 banner-regular-title opacity-0")}

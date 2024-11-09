@@ -9,7 +9,6 @@ const About = () => {
     <>
       <section className="section pt-0">
         <Banner title="About Us" />
-        {/* About */}
         <div className="section container">
           <div className="row items-center justify-center">
             <div className="animate md:col-6 md:order-2 lg:col-5">

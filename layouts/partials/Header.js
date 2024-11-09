@@ -5,6 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React, { useEffect, useRef, useState } from "react";
 import { CgClose } from "react-icons/cg";
+import Image from "next/image";
 
 const Header = () => {
   const { main } = menu;
@@ -42,19 +43,18 @@ const Header = () => {
         }`}
         ref={headerRef}
       >
-        <nav className="navbar container-xl flex justify-between items-center">
-          <div className="order-0">
-            <h5><b>KHALSA FINANCIAL</b></h5>
+        <nav className="navbar container-xl flex justify-center items-center">
+          <div>
+            <Image src="/images/logo.jpeg" height={100} width={100} />
           </div>
-
           <ul
             id="nav-menu"
-            className={`navbar-nav order-1 flex justify-center w-full lg:order-1 md:w-auto md:space-x-2 lg:flex ${
+            className={`navbar-nav order-1 flex relative justify-center items-center w-full lg:order-1 md:w-auto md:space-x-2 lg:flex ${
               !showMenu && "hidden"
-            }`}
+            } lg:relative lg:right-[50px]`}
           >
             {main.map((menu, i) => (
-              <React.Fragment key={`menu-${i}`}>
+              <div key={`menu-${i}`}>
                 {menu.hasChildren ? (
                   <li className="nav-item nav-dropdown group relative">
                     <span className="nav-link inline-flex items-center">
@@ -90,11 +90,11 @@ const Header = () => {
                     </Link>
                   </li>
                 )}
-              </React.Fragment>
+              </div>
             ))}
           </ul>
 
-          <div className="order-1 ml-auto flex items-center md:ml-0">
+          <div className="order-1 ml-auto flex items-center">
             {showMenu ? (
               <button
                 className="h-8 w-8 text-3xl text-dark lg:hidden"
@@ -128,4 +128,3 @@ const Header = () => {
 };
 
 export default Header;
-
