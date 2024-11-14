@@ -43,7 +43,7 @@ const Header = () => {
         }`}
         ref={headerRef}
       >
-        <nav className="navbar container-xl flex justify-center items-center">
+        <nav className="navbar container-xl flex justify-center items-center text-[#223E3E]">
           <div>
             <Image src="/images/logo.jpeg" height={100} width={100} />
           </div>
@@ -79,7 +79,7 @@ const Header = () => {
                     </ul>
                   </li>
                 ) : (
-                  <li className="nav-item">
+                  <li className="nav-item text-[#223E3E]">
                     <Link
                       href={menu.url}
                       className={`nav-link block ${
@@ -97,14 +97,14 @@ const Header = () => {
           <div className="order-1 ml-auto flex items-center">
             {showMenu ? (
               <button
-                className="h-8 w-8 text-3xl text-dark lg:hidden"
+                className="h-8 w-8 text-3xl lg:hidden"
                 onClick={() => setShowMenu(!showMenu)}
               >
                 <CgClose />
               </button>
             ) : (
               <button
-                className="text-dark lg:hidden"
+                className="lg:hidden"
                 onClick={() => setShowMenu(!showMenu)}
               >
                 <svg

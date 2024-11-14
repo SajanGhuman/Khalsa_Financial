@@ -54,10 +54,12 @@ const About = () => {
                 />
               </div>
             </div>
-            <div className="animate md:col-6 md:order-1 lg:col-4">
+            <div className="animate md:col-6 md:order-1 lg:col-4 text-[#193737]">
               <p>WHO WE ARE</p>
-              <h2 className="section-title bar-left mt-4">About Us</h2>
-              <p className="mt-10">
+              <h2 className="section-title bar-left mt-4 text-[#193737]">
+                About Us
+              </h2>
+              <p className="mt-10 text-[#193737]">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua.
               </p>
@@ -68,9 +70,9 @@ const About = () => {
         {/* Works */}
         <div className="section container">
           <div className="animate text-center">
-            <p>Our Works</p>
-            <h2 className="section-title mt-4">What We Do</h2>
-            <p className="mt-10">
+            <p className="text-[#193737]">Our Works</p>
+            <h2 className="section-title mt-4 text-[#193737]">What We Do</h2>
+            <p className="mt-10 text-[#193737]">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>

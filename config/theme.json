@@ -2,7 +2,7 @@
   "colors": {
     "default": {
       "theme_color": {
-        "primary": "#a28f70",
+        "primary": "#D19F6B",
         "body": "#f5f0e8",
         "border": "#d3bd9a",
         "border_secondary": "#674f04",
@@ -10,7 +10,7 @@
         "theme_dark": "#4a3b3b"
       },
       "text_color": {
-        "default": "#83580b",
+        "default": "#D19F68",
         "dark": "#1A1A1A",
         "light": "#fde994"
       }
@@ -27,6 +27,8 @@
       "base": "16",
       "scale": "1.3"
     }
+  },
+  "background": {
+    "color": "#0F2121"
   }
 }
-

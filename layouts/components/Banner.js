@@ -64,10 +64,10 @@ const Banner = ({ title }) => {
   }, []);
 
   return (
-    <div className="banner banner-single bg-gradient-to-b from-[#D3BD9A] to-[#EADDCB]" ref={banner}>
+    <div className="banner banner-single bg-gradient-to-t from-[#0F2121] to-[#1A3A3A]" ref={banner}>
       <div className="container-xl ">
         <div className="banner-wrapper relative text-center">
-          {markdownify(title, "h1", "mb-8 banner-regular-title opacity-0")}
+          {markdownify(title, "h1", "mb-8 banner-regular-title opacity-0 text-[#D19F6B]")}
           <ul className="breadcrumb flex items-center justify-center opacity-0">
             <li>
               <Link className="text-primary" href="/">

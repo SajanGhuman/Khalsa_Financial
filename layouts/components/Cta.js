@@ -9,12 +9,16 @@ function Cta() {
   if (!enable) return;
 
   return (
-    <section className="cta section pt-0 bg-gradient-to-b from-[#D3BD9A] to-[#EADDCB]">
+    <section className="cta section pt-0 bg-gradient-to-t from-[#0F2121] to-[#1A3A3A]">
       <div className="container-xl">
         <div className="section relative px-4 text-center">
           <div className="animate">
-            <h2 className="section-title">Enroll in the course now</h2>
-            <p className="mt-10 text-black">lorem</p>
+            <h2 className="section-title text-[#D19F68]">
+              Enroll in the course now
+            </h2>{" "}
+            {/* Updated text color */}
+            <p className="mt-10 text-[#D19F68]">lorem</p>{" "}
+            {/* Updated text color */}
             <Link
               href={button.link}
               className="btn btn-primary mt-10 bg-[#674F04] text-[20px] p-2"
