@@ -4,11 +4,7 @@
     "paths": {
       "@layouts/*": ["layouts/*"],
       "@components/*": ["layouts/components/*"],
-      "@partials/*": ["layouts/partials/*"],
-      "@shortcodes/*": ["layouts/shortcodes/*"],
-      "@config/*": ["config/*"],
       "@json/*": ["json/*"],
-      "@hooks/*": ["hooks/*"],
       "@lib/*": ["lib/*"]
     }
   }
