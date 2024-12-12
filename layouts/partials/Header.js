@@ -1,5 +1,3 @@
-import Logo from "../components/Logo";
-import config from "../../config/config.json";
 import menu from "../../config/menu.json";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -32,8 +30,6 @@ const Header = () => {
     });
   }, []);
 
-  const { logo } = config.site;
-
   return (
     <>
       <div className="header-height-fix"></div>
@@ -45,7 +41,7 @@ const Header = () => {
       >
         <nav className="navbar container-xl flex justify-center items-center text-[#223E3E]">
           <div>
-            <Image src="/images/logo.jpeg" height={100} width={100} />
+            <h1 className="text-[#D19F6B]">KF</h1>
           </div>
           <ul
             id="nav-menu"

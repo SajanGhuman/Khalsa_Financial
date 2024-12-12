@@ -1,20 +1,37 @@
 import { NextRequest, NextResponse } from "next/server";
 import { Resend } from "resend";
-import BluewaveResetPasswordEmail from "../../../components/email-template";
+import KhalsaFinancialEmail from "../../../components/khalsa_financial_email";
+import prisma from "../../../lib/prisma";
+import { randomUUID } from "crypto";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
-const DOMAIN = process.env.DOMAIN || "localhost:3000";
-const PROTOCOL = process.env.NODE_ENV === "production" ? "https" : "http";
 
 export async function POST(req: NextRequest) {
   const { email, name, tradingLevel } = await req.json();
 
+  const existingUser = await prisma.user.findUnique({
+    where: { email },
+  });
+
+  if (!existingUser) {
+    // Create a new user with a 'PENDING' status if it does not exist
+    await prisma.user.create({
+      data: {
+        user_id: `${randomUUID()}${randomUUID()}`.replace(/-/g, ""),
+        email,
+        first_name: name,
+        last_name: "",
+        role: tradingLevel || "",
+      },
+    });
+  }
+
   try {
     const { data, error } = await resend.emails.send({
-      from: "Acme <onboarding@resend.dev>",
+      from: "admin@khalsafinancial.ca",
       to: email,
       subject: "Google Meet Link",
-      react: BluewaveResetPasswordEmail({
+      react: KhalsaFinancialEmail({
         name: name,
       }),
     });

@@ -1,5 +1,5 @@
 {
-  "name": "andromeda-light-nextjs",
+  "name": "Khalsa Financial",
   "description": "",
   "version": "2.0.0",
   "license": "MIT",
@@ -11,7 +11,9 @@
     "start": "next start"
   },
   "dependencies": {
+    "@prisma/client": "^6.0.1",
     "@react-email/components": "^0.0.25",
+    "bcryptjs": "^2.4.3",
     "disqus-react": "^1.1.5",
     "feather-icons-react": "^0.7.0",
     "github-slugger": "^2.0.0",
@@ -47,6 +49,7 @@
     "postcss": "^8.4.42",
     "prettier": "^3.3.3",
     "prettier-plugin-tailwindcss": "^0.6.6",
+    "prisma": "^6.0.1",
     "sass": "^1.77.8",
     "sharp": "^0.33.5",
     "tailwind-bootstrap-grid": "^5.1.0",
