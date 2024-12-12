@@ -54,6 +54,7 @@ module.exports = {
         "theme-dark": theme.colors.default.theme_color.theme_dark,
         "custom-blue": "#1D34A5",
         "light-blue": "#ADD8E6",
+        "custom-green": "#1A3939",
       },
       fontSize: {
         base: font_base + "px",

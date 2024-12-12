@@ -17,10 +17,14 @@ function Cta() {
               Enroll in the course now
             </h2>{" "}
             {/* Updated text color */}
-            <p className="mt-10 text-[#D19F68]">lorem</p>{" "}
+            <p className="mt-10 text-[#D19F68] text-lg font-bold">
+              Take the first step toward financial independence. Our courses
+              cover everything from budgeting and saving to investing and wealth
+              management.
+            </p>{" "}
             {/* Updated text color */}
             <Link
-              href={button.link}
+              href="/register"
               className="btn btn-primary mt-10 bg-[#674F04] text-[20px] p-2"
             >
               ENROLL NOW

@@ -1,9 +1,7 @@
 function Circle({ className, width, height, fill = true, ...props }) {
   return (
     <div
-      className={`absolute ${className} ${
-        fill ? "bg-primary" : "bg-[#ffe6db]"
-      } rounded-full`}
+      className={`absolute ${className} ${"bg-[#193838]"} rounded-full`}
       style={{ width: `${width}px`, height: `${height}px` }}
       {...props}
     ></div>

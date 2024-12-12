@@ -1,6 +1,6 @@
 import ImageFallback from "../../layouts/components/ImageFallback";
 
-const SpecialFeatures = ({ speciality }) => {
+const SpecialFeatures = () => {
   return (
     <section className="section pt-0 mt-0">
       <div className="container">
@@ -8,21 +8,22 @@ const SpecialFeatures = ({ speciality }) => {
           <div className="animate lg:col-6 lg:order-2">
             <ImageFallback
               className="mx-auto"
-              src={speciality.primary.image}
+              src={""}
               width={575}
               height={511}
-              alt="primary speciality"
+              alt="‎"
             />
           </div>
           <div className="animate lg:col-5 lg:order-1">
-            <p>Why Choose Us</p>
+            <p className="text-primary font-bold">Why Choose Us</p>
             <h2 className="mt-4 section-title bar-left">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
+              At Khalsa Financial, we believe in empowering you with the tools,
+              knowledge, and confidence to achieve financial independence.
             </h2>
-            <p className="mt-10">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
+            <p className="mt-10 text-[#674F04]">
+              Our personalized approach ensures that every plan aligns with your
+              unique goals. We prioritize transparency, trust, and measurable
+              results in our journey with you.
             </p>
           </div>
         </div>
@@ -30,20 +31,22 @@ const SpecialFeatures = ({ speciality }) => {
           <div className="animate lg:col-6">
             <ImageFallback
               className="mx-auto"
-              src={speciality.secondary.image}
+              src={""}
               width={575}
               height={511}
-              alt="secondary speciality"
+              alt="‎"
             />
           </div>
           <div className="animate lg:col-5">
-            <p>Lorem Ipsum is simply ypesetting</p>
+            <p className="text-primary font-bold">Comprehensive Solutions</p>
             <h2 className="mt-4 section-title bar-left">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
+              Tailored Strategies for Every Stage of Life
             </h2>
-            <p className="mt-10">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
+            <p className="mt-10 text-[#674F04]">
+              We offer a wide range of financial solutions, including retirement
+              planning, investment strategies, debt management, and business
+              funding. No matter where you are in life, we help you build a
+              secure and prosperous future.
             </p>
           </div>
         </div>
