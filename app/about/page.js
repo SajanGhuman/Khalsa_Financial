@@ -12,7 +12,6 @@ const About = () => {
     <>
       <section className="section pt-0">
         <Banner title="About Us" />
-
         {/* Mission */}
         <div className="section container">
           <div className="row items-center justify-center">
