@@ -3,8 +3,6 @@ import { Resend } from "resend";
 import BluewaveResetPasswordEmail from "../../../components/email-template";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
-const DOMAIN = process.env.DOMAIN || "localhost:3000";
-const PROTOCOL = process.env.NODE_ENV === "production" ? "https" : "http";
 
 export async function POST(req: NextRequest) {
   const { email, name, tradingLevel } = await req.json();

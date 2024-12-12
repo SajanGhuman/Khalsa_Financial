@@ -1,6 +1,6 @@
 import ImageFallback from "../../layouts/components/ImageFallback";
 
-const SpecialFeatures = ({ speciality }) => {
+const SpecialFeatures = () => {
   return (
     <section className="section pt-0 mt-0">
       <div className="container">
@@ -8,7 +8,7 @@ const SpecialFeatures = ({ speciality }) => {
           <div className="animate lg:col-6 lg:order-2">
             <ImageFallback
               className="mx-auto"
-              src={speciality.primary.image}
+              src={''}
               width={575}
               height={511}
               alt="primary speciality"
@@ -30,7 +30,7 @@ const SpecialFeatures = ({ speciality }) => {
           <div className="animate lg:col-6">
             <ImageFallback
               className="mx-auto"
-              src={speciality.secondary.image}
+              src={''}
               width={575}
               height={511}
               alt="secondary speciality"

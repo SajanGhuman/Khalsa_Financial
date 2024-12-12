@@ -1,14 +1,9 @@
 import Social from "../components/Social";
-import config from "../../config/config.json";
 import menu from "../../config/menu.json";
 import social from "../../config/social.json";
-import Logo from "../../layouts/components/Logo";
-import { markdownify } from "../../lib/utils/textConverter";
 import Link from "next/link";
 
 const Footer = () => {
-  const { copyright, footer_content } = config.params;
-  const { email, phone, location } = config.contact_info;
   return (
     <footer className="">
       <div className="container">
@@ -19,11 +14,12 @@ const Footer = () => {
               Socials
             </h3>
             <div className="mt-5" style={{ color: "#674F04" }}>
-              {email && (
-                <Link href={`mailto:${email}`} style={{ color: "#674F04" }}>
-                  admin@khalsafinancial.com
-                </Link>
-              )}
+              <Link
+                href="mailto:admin@khalsafinancial.com"
+                style={{ color: "#674F04" }}
+              >
+                admin@khalsafinancial.com
+              </Link>
               {/* social icons */}
               <Social source={social} className="social-icons mt-5" />
             </div>
@@ -54,11 +50,9 @@ const Footer = () => {
             <h3 className="h5 text-[#674F04]">Location & Contact</h3>
             <ul className="mt-5 leading-10">
               <li>Canada</li>
-              {phone && (
-                <li>
-                  <p style={{ color: "#674F04" }}>123456789</p>
-                </li>
-              )}
+              <li>
+                <p style={{ color: "#674F04" }}>123456789</p>
+              </li>
             </ul>
           </div>
         </div>

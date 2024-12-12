@@ -1,8 +1,8 @@
 "use client";
-import Banner from "./components/Banner";
-import Circle from "./components/Circle";
-import Cta from "./components/Cta";
-import ImageFallback from "./components/ImageFallback";
+import Banner from "../../layouts/components/Banner";
+import Circle from "../../layouts/components/Circle";
+import Cta from "../../layouts/components/Cta";
+import ImageFallback from "../../layouts/components/ImageFallback";
 
 const About = () => {
   return (

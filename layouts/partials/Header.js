@@ -1,5 +1,3 @@
-import Logo from "../components/Logo";
-import config from "../../config/config.json";
 import menu from "../../config/menu.json";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -31,8 +29,6 @@ const Header = () => {
       }
     });
   }, []);
-
-  const { logo } = config.site;
 
   return (
     <>
